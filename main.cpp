@@ -259,15 +259,16 @@ int main(int argc, char* argv[])
         return 1;
     }
     std::stringstream ss = codeStream(argv[1]);
+    // step 1: lexical analysis
     clean(ss);
     std::vector<std::string> v = ss_to_str_vector(ss);
-    for(auto x : v){
-        std::cout << x << std::endl;
-    }
-
-
     std::vector<Token> tokens = str_vector_to_tokens_vector(v);
-    // todo: validate grammar of tokens
+
+
+
+    // step 2: syntax analyzer
+
+
 
 
 
